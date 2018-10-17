@@ -3573,6 +3573,11 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+picostyle@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/picostyle/-/picostyle-2.0.1.tgz#ac403e77085bb9ac75929f58a66a609684f845ca"
+  integrity sha512-72RM7tTXjIvSHha/LO52UNwN3cvWpkxQriVaD8YZ3vUttmZdG3jG+DW/S73gROT+xv2a0+VIaHBvoOcpOYOUCQ==
+
 pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
