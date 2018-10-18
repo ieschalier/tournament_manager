@@ -25,6 +25,9 @@
     "preact": "^8.3.1",
     "preact-mdl": "^2.2.2",
     "preact-router": "^2.6.1",
-    "react-hot-loader": "^4.3.11"
+    "react-hot-loader": "^4.3.11",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.1",
+    "redux-devtools": "^3.4.1"
   }
 }
