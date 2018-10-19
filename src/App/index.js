@@ -1,4 +1,4 @@
-import preact, { Component } from 'preact'
+import { h } from 'preact'
 import Router from 'preact-router'
 
 import Main from './Main'

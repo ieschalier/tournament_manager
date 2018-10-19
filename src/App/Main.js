@@ -1,6 +1,5 @@
-import preact, { Component } from 'preact'
-import mdl from 'material-design-lite/material'
-import { Button } from 'preact-mdl'
+import { h } from 'preact'
+import 'material-design-lite/material'
 import { H1, MainContainer } from '../Common/style'
 
 const Main = () => (
