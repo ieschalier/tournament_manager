@@ -11,7 +11,6 @@ const createTournament = (state = defaultState, action) => {
       }
     default:
       return state
-      break
   }
 }
 

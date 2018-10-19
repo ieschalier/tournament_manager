@@ -1,13 +1,18 @@
+/* @flow */
 import { h } from 'preact'
 import { connect } from 'react-redux'
 import 'material-design-lite/material'
 import { Button, TextField } from 'preact-mdl'
-import PropTypes from 'prop-types'
 
 import a from '../store/action'
 import { H1, MainContainer } from '../Common/style'
 
-const CreateTournament = ({ name, updateName }) => (
+type Props = {
+  name: string,
+  updateName: string => void,
+}
+
+const CreateTournament = ({ name, updateName }: Props) => (
   <MainContainer>
     <header>
       <H1 style={{ textAlign: 'center', paddingTop: 30 }}>
@@ -34,11 +39,6 @@ const CreateTournament = ({ name, updateName }) => (
     </div>
   </MainContainer>
 )
-
-CreateTournament.propTypes = {
-  name: PropTypes.string.isRequired,
-  updateName: PropTypes.func.isRequired,
-}
 
 export default connect(
   p => ({ name: p.createTournament.name }),
