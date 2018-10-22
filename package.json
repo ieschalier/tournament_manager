@@ -23,13 +23,16 @@
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
     "preact-compat": "^3.18.4",
+    "react-hot-loader": "^4.3.11",
+    "source-map-explorer": "^1.6.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "build": "webpack --config webpack/build.config.js",
+    "start": "webpack-dev-server --open --config webpack/dev.config.js",
+    "explorer": "source-map-explorer dist/main.js dist/main.js.map"
   },
   "husky": {
     "hooks": {
@@ -44,7 +47,6 @@
     "preact-mdl": "^2.2.2",
     "preact-router": "^2.6.1",
     "prop-types": "^15.6.2",
-    "react-hot-loader": "^4.3.11",
     "react-redux": "^5.0.7",
     "redux": "^4.0.1",
     "redux-devtools": "^3.4.1"

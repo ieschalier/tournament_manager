@@ -5,15 +5,14 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: './src/index.js',
-  devtool: 'source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: '../dist',
     hot: true,
     publicPath: '/',
     historyApiFallback: true,
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['../dist']),
     new HtmlWebpackPlugin({
       title: 'Tournament Management',
       template: 'template.html',
@@ -22,7 +21,7 @@ module.exports = {
   ],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     // publicPath: '/',
   },
   module: {
