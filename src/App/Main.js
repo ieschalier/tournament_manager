@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import 'material-design-lite/material'
+import { AnchorButton } from '@blueprintjs/core'
 import { H1, MainContainer } from '../Common/style'
 
 const Main = () => (
@@ -17,7 +17,9 @@ const Main = () => (
         justifyContent: 'center',
       }}
     >
-      <a href="/createtournament">Create tournament</a>
+      <AnchorButton href="/createtournament" intent="primary" minimal>
+        Create tournament
+      </AnchorButton>
     </div>
   </MainContainer>
 )

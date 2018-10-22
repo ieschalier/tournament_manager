@@ -1,8 +1,6 @@
 /* @flow */
 import { h } from 'preact'
 import { connect } from 'react-redux'
-// import 'material-design-lite/material'
-// import { Button, TextField } from 'preact-mdl'
 import { Button, InputGroup, FormGroup } from '@blueprintjs/core'
 
 import a from '../store/action'

@@ -13,6 +13,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['../dist']),
+    new webpack.NormalModuleReplacementPlugin(
+      /.*\/generated\/iconSvgPaths.*/,
+      path.resolve(__dirname, '../fakeSvgPaths.js'),
+    ),
     new HtmlWebpackPlugin({
       title: 'Tournament Management',
       template: 'template.html',

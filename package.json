@@ -32,7 +32,7 @@
   "scripts": {
     "build": "webpack --config webpack/build.config.js",
     "start": "webpack-dev-server --open --config webpack/dev.config.js",
-    "explorer": "source-map-explorer dist/main.js dist/main.js.map"
+    "explorer": "yarn build && source-map-explorer dist/main.js dist/main.js.map"
   },
   "husky": {
     "hooks": {
