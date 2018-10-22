@@ -32,6 +32,7 @@
   "scripts": {
     "build": "webpack --config webpack/build.config.js",
     "start": "webpack-dev-server --open --config webpack/dev.config.js",
+    "deploy": "yarn build && cp dist/index.html dist/404.html && surge dist tournament.surge.sh",
     "explorer": "yarn build && source-map-explorer dist/main.js dist/main.js.map"
   },
   "husky": {
