@@ -1,5 +1,5 @@
 const defaultState = {
-  name: '',
+  name: null,
 }
 
 const createTournament = (state = defaultState, action) => {
