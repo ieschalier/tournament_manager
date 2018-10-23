@@ -5,6 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-flow": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-flow": "^7.0.0",
     "babel-cli": "^6.26.0",
@@ -23,7 +25,6 @@
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
     "preact-compat": "^3.18.4",
-    "react-hot-loader": "^4.3.11",
     "source-map-explorer": "^1.6.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
@@ -31,7 +32,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack/build.config.js",
-    "start": "webpack-dev-server --open --config webpack/dev.config.js",
+    "start": "webpack-dev-server --config webpack/dev.config.js",
     "deploy": "yarn build && cp dist/index.html dist/404.html && surge dist tournament.surge.sh",
     "explorer": "yarn build && source-map-explorer dist/main.js dist/main.js.map"
   },

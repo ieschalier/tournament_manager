@@ -16,7 +16,7 @@ type Props = {
 }
 
 class TournamentList extends Component<Props> {
-  componentDidMount() {
+  componentDidMount = () => {
     const { tournaments } = this.props
     if (Object.keys(tournaments).length === 0) {
       route('/createtournament')

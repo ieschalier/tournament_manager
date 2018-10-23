@@ -9,9 +9,9 @@ import { MainContainer, MainCenter } from '../Common/style'
 import Header from '../Common/Header'
 
 type Props = {
-  name: string,
-  updateName: string => void,
-  create: string => void,
+  name?: string,
+  updateName: (name?: string) => void,
+  create: (name?: string) => void,
 }
 
 const CreateTournament = ({ name, updateName, create }: Props) => {
@@ -50,6 +50,10 @@ const CreateTournament = ({ name, updateName, create }: Props) => {
       </MainCenter>
     </MainContainer>
   )
+}
+
+CreateTournament.defaultProps = {
+  name: null,
 }
 
 export default connect(
