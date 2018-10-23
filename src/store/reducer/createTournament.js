@@ -9,6 +9,11 @@ const createTournament = (state = defaultState, action) => {
         ...state,
         name: action.name,
       }
+    case 'CREATE_TOURNAMENT':
+      return {
+        ...state,
+        name: '',
+      }
     default:
       return state
   }

@@ -2,35 +2,26 @@
 import { h } from 'preact'
 import { connect } from 'react-redux'
 import { Button, InputGroup, FormGroup } from '@blueprintjs/core'
+import { route } from 'preact-router'
 
 import a from '../store/action'
-import { H1, MainContainer } from '../Common/style'
+import { MainContainer, MainCenter } from '../Common/style'
+import Header from '../Common/Header'
 
 type Props = {
   name: string,
   updateName: string => void,
+  create: string => void,
 }
 
-const CreateTournament = ({ name, updateName }: Props) => {
+const CreateTournament = ({ name, updateName, create }: Props) => {
   const intent = name === '' ? 'warning' : 'none'
   const helperText = name === '' ? 'Required name' : ''
 
   return (
     <MainContainer>
-      <header>
-        <H1 style={{ textAlign: 'center', paddingTop: 30 }}>
-          Tournament creation
-        </H1>
-      </header>
-      <div
-        style={{
-          display: 'flex',
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
-        }}
-      >
+      <Header title="Tournament creation" />
+      <MainCenter>
         <FormGroup
           label="Tournament name"
           intent={intent}
@@ -45,15 +36,26 @@ const CreateTournament = ({ name, updateName }: Props) => {
             required
           />
         </FormGroup>
-        <Button disabled={!name} intent="primary" large>
+        <Button
+          onClick={() => {
+            create(name)
+            route('/tournamentlist')
+          }}
+          disabled={!name}
+          intent="primary"
+          large
+        >
           Create tournament
         </Button>
-      </div>
+      </MainCenter>
     </MainContainer>
   )
 }
 
 export default connect(
   p => ({ name: p.createTournament.name }),
-  { updateName: a.createTournamentUpdateName },
+  {
+    updateName: a.createTournamentUpdateName,
+    create: a.createTournament,
+  },
 )(CreateTournament)

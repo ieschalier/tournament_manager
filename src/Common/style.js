@@ -17,3 +17,11 @@ export const H1 = style('h1')({
   textAlign: 'center',
   paddingTop: 30,
 })
+
+export const MainCenter = style('div')({
+  display: 'flex',
+  flex: '1',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column',
+})
